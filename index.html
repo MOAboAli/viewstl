@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="stl_cont1" style="width:700px;height:700px;margin:0 auto;" ></div>
+<br/>
+<div id="stl_cont2" style="width:700px;height:700px;margin:0 auto;"></div>
+
+<script src="stl_viewer.min.js"></script>
+<script src="three.min.js"></script>
+<script src="parser.min.js"></script>
+<script src="load_stl.min.js"></script>
+<script src="webgl_detector.js"></script>
+<script src="CanvasRenderer.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="TrackballControls.js"></script>
+<script src="Projector.js"></script>
+<script src="ie_polyfills.js"></script>
+
+
+<script>
+	var stl_viewer1=new StlViewer(document.getElementById("stl_cont1"),{
+        auto_rotate:true,
+        canvas_height:"100%",
+
+    });
+
+    var stl_viewer2=new StlViewer(document.getElementById("stl_cont2"),{
+        auto_rotate:true,
+        canvas_height:"100%",
+
+    });
+
+    stl_viewer1.add_model({id:1, filename:"Big Ghost.stl"});
+    stl_viewer2.add_model({id:2, filename:"1.stl"});
+    console.log("Done Loading")
+    stl_viewer1.set_display(1, "smooth");
+    console.log("displaying 1")
+    stl_viewer2.set_display(2, "smooth");
+    console.log("displaying 2")
+    
+
+
+
+    // var stl_viewer2=new StlViewer(document.getElementById("stl_cont2"));
+    
+    // stl_viewer2.set_display(2, "smooth");
+
+</script>
+</body>
+</html>
