@@ -6,7 +6,7 @@ https://github.com/omrips/viewstl
 
 Usage:
 ================
-  * Must be run server not local, if you have windows run IIS
+  * Must be run on a server not local, if you have windows run IIS
   * Open index.html, it should run two stl files in the same page.
 
 
